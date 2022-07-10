@@ -27,18 +27,6 @@ class Solver:
             row_str += '</tr>'              # 한 줄에 대한 클로징 태그를 닫아서 씀
             Solver.html_file.write(row_str)
 
-        ''' -> Numpy 이용했을 때의 코드입니다. 혹시나 피드백받을 내용이 있나 싶어서 남겨두었습니다!
-        for i in range(len(Solver.data)):
-            row_str = '<tr>'
-            for j in range(len(Solver.data[0])):
-                data_str = '<td>'
-                data_str += str(Solver.data[i][j])
-                data_str += '</td>'
-                row_str += data_str
-            row_str += '</tr>'
-            Solver.html_file.write(row_str)
-        '''
-
         Solver.html_file.write("</table></body></html>") # HTML 양식을 끝내는 코드 추가
 
     def HTML_opener(self):  # 새 창으로 띄우기 위한 메소드
