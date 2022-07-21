@@ -13,7 +13,7 @@ def WebSearch(word):
 
         if response.status_code == 200:
             chrome_options = webdriver.ChromeOptions()
-            driver = webdriver.Edge(service=Service(ChromeDriverManager().install()), options=chrome_options)
+            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
             driver.get(SearchURL)
 
             Result_html = driver.page_source
