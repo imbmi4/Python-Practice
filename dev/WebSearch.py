@@ -26,6 +26,10 @@ def WebSearch(word):
 
     def PrintURL(soup):
         result = soup.select_one(".yuRUbf") #구글의 검색결과의 div의 class의 선택자
+        if result == None:
+            print("No result about " + '\''+SearchWord+'\'')
+            return
+
         print(result.find("a")["href"])
 
     PrintURL(Search(word))
